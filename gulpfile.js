@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-const ghPages = require('gulp-gh-pages');
+const deploy = require('gulp-gh-pages');
 const minifyHtml = require("gulp-minify-html");
 
 // Compile Sass & Inject Into Browser
@@ -43,3 +43,9 @@ gulp.task('fa', function () {
 })
 
 gulp.task('default', ['js', 'serve', 'fa', 'fonts']);
+
+
+gulp.task('deploy', function () {
+    return gulp.src("./src/**/*")
+        .pipe(deploy())
+});

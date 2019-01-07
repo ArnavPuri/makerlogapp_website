@@ -1,10 +1,11 @@
 {
   "name": "MakerlogAppLanding",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Makerlog App landing page",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gulp deploy"
   },
   "author": "Arnav Puri",
   "dependencies": {
